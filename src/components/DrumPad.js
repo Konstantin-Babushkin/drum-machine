@@ -35,6 +35,7 @@ export default class DrumPad extends React.Component {
     const { id, keyTrigger } = this.props.data;
     const sound = document.getElementById(keyTrigger);
     sound.currentTime = 0;
+    console.log(sound);
     sound.play();
     this.props.onPlay(id);
     this.setState({ style: pressed });
@@ -50,7 +51,12 @@ export default class DrumPad extends React.Component {
         onClick={this.playSound}
         style={this.state.style}
       >
-        <audio id={keyTrigger} src={url} className="clip"></audio>
+        <audio
+          id={keyTrigger}
+          src={url}
+          className="clip"
+          type="audio/mp3"
+        ></audio>
         {keyTrigger}
       </div>
     );

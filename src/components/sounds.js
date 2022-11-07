@@ -3,7 +3,7 @@ export const bank1 = [
     keyCode: 81,
     keyTrigger: "Q",
     id: "alife",
-    url: "public/bog/alife.mp3",
+    url: "file://../src/components/bog/alife.mp3",
   },
   {
     keyCode: 87,
